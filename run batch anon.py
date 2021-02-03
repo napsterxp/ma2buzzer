@@ -7,7 +7,7 @@ from time import sleep
 
 import ftplib
 def reset():
-    session = ftplib.FTP('217.199.187.250','USERNAME','PASSWORD')
+    session = ftplib.FTP('WEBSERVERIPADDRESS','USERNAME','PASSWORD')
     file = open('helloworld.txt','rb')                  # file to send
     session.storbinary('STOR /public_html/wordpress/GLP/hits.txt', file)     # send the file
     file.close()                                    # close file and FTP
